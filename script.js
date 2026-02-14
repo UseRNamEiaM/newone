@@ -25,7 +25,7 @@ setInterval(createHeart,500);
 
 
 // 💖 Love Counter
-const loveDate = new Date("2024-02-14");
+const loveDate = new Date("2020-02-14");
 function updateCountdown(){
     const now = new Date();
     let diff = now - loveDate;
@@ -41,7 +41,7 @@ updateCountdown();
 
 
 // ✨ Typing Love Letter
-const text="From the moment you came into my life, everything became magical. I choose you today, tomorrow, and forever ❤️";
+const text="From the moment you came into my life, everything became special . I choose you today, tomorrow, and forever babai ❤️";
 let i=0;
 function typeWriter(){
     if(i<text.length){
@@ -119,4 +119,5 @@ function playMusic(){
     music.volume=0.5;
     music.play();
 }
+
 
