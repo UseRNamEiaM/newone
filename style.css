@@ -1,0 +1,173 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:radial-gradient(circle at center,#ff4e8a,#ff0066 60%,#800040);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+    color:white;
+    padding:20px;
+    transition:1.2s ease;
+}
+
+/* 💖 Floating Hearts Background */
+.hearts-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+}
+
+.heart{
+    position:absolute;
+    bottom:-50px;
+    font-size:20px;
+    animation:floatHearts linear forwards;
+    opacity:0.8;
+}
+
+@keyframes floatHearts{
+    from{
+        transform:translateY(0) scale(1);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh) scale(1.4);
+        opacity:0;
+    }
+}
+
+.container{
+    max-width:500px;
+    width:100%;
+    transition:0.8s ease;
+    z-index:1;
+    position:relative;
+}
+
+h1{
+    font-size:2.2rem;
+    margin-bottom:10px;
+    animation:fadeIn 2s ease forwards;
+}
+
+#countdown{
+    font-weight:bold;
+    margin-bottom:15px;
+    opacity:0.9;
+}
+
+#typeText{
+    min-height:70px;
+    margin-bottom:20px;
+    opacity:0.95;
+}
+
+button{
+    padding:12px 25px;
+    font-size:1rem;
+    border:none;
+    border-radius:30px;
+    margin:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.yes{
+    background:white;
+    color:#ff0066;
+}
+
+.no{
+    background:#ff1e63;
+    color:white;
+    position:relative;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+/* Love Page Cinematic */
+#lovePage{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    animation:cinematicIn 1.2s ease forwards;
+    transform:scale(0.9);
+    opacity:0;
+    z-index:1;
+    position:relative;
+}
+
+@keyframes cinematicIn{
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.slideshow{
+    width:85%;
+    max-width:320px;
+    height:320px;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    margin:20px 0;
+}
+
+.slideshow img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:opacity 0.8s ease;
+}
+
+.loveText{
+    font-size:2rem;
+    font-weight:bold;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{text-shadow:0 0 10px #fff;}
+    to{text-shadow:0 0 25px #ffccff;}
+}
+
+/* Golden Sparkles */
+.sparkle{
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:gold;
+    border-radius:50%;
+    animation:floatUp 3s linear forwards;
+}
+
+@keyframes floatUp{
+    from{transform:translateY(0); opacity:1;}
+    to{transform:translateY(-200px); opacity:0;}
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@media(max-width:480px){
+    h1{font-size:1.8rem;}
+}
